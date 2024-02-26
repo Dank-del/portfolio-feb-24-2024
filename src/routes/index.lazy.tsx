@@ -1,22 +1,21 @@
 import { createLazyFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@/lib/graphql';
-import BlogPostCard from '@/components/blog-post-card';
 import { PostGQLResponse } from '@/types/posts';
 import ExperiencePanel from '@/components/ui/experience-panel';
 import experience from "@/assets/experience.json"
 import projects from "@/assets/projects.json";
 
-import ProjectCard from '@/components/project-card';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
-import { Loader2 } from 'lucide-react';
+import { BookOpenCheck, Loader2 } from 'lucide-react';
+import { BentoGridItem } from '@/components/ui/bento-grid';
+import { HoverEffect } from '@/components/ui/card-hover-effect';
 export const Route = createLazyFileRoute('/')({
     component: Index,
 })
 
 function Index() {
     const { loading, data } = useQuery<PostGQLResponse>(GET_POSTS);
-    console.log(data);
 
     return (
         <div className="flex flex-col items-start gap-2">
@@ -49,29 +48,28 @@ function Index() {
                     </Alert>
                 )}
                 <div className='grid grid-cols-2 mt-3 md:grid-cols-3 gap-4'>
-                    {!loading && data?.user.posts.nodes.map((post) => {
+                    {!loading && data?.user.posts.nodes.map((post, i) => {
                         console.log(post)
                         return (
-                            <BlogPostCard
-                            title={post.title}
-                            readTimeMins={post.readTimeInMinutes}
-                            tags={post.tags}
-                            link={post.url}
-                        />
+                            // <BlogPostCard
+                            // title={post.title}
+                            // readTimeMins={post.readTimeInMinutes}
+                            // tags={post.tags}
+                            // link={post.url}
+                            <BentoGridItem
+                                key={i}
+                                title={post.title}
+                                description={`${post.readTimeInMinutes} min read`}
+                                header={<img src={post.coverImage.url} />}
+                                icon={<BookOpenCheck />}
+                                className={i === 3 || i === 6 ? "md:col-span-2" : ""}
+                            />
                         )
                     })}
                 </div>
             </div>
-            <h1 className='text-2xl'>Projects</h1>
-            <div className='grid grid-cols-2 mt-3 md:grid-cols-3 gap-4'>
-                {projects.map((project) => (
-                    <ProjectCard
-                        title={project.title}
-                        description={project.description}
-                        links={project.links as unknown as Record<string, string>}
-                    />
-                ))}
-            </div>
+            <h1 className='text-2xl mt-2'>Projects</h1>
+            <HoverEffect items={projects} />
         </div>
     )
 }

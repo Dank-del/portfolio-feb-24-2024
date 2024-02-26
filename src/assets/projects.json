@@ -2,96 +2,66 @@
     {
         "title": "typedcache",
         "description": "Typesafe in-memory caching for Node.js written in typescript",
-        "links": {
-            "npm": "https://www.npmjs.com/package/@sayanbiswas/typedcache",
-            "github": "https://github.com/Dank-del/typedcache"
-        }
+        "link": "https://github.com/Dank-del/typedcache"
     },
     {
         "title": "stats-bot",
         "description": "Telegram bot that generates statistics about your group chat",
-        "links": {
-            "github": "https://github.com/Dank-del/stats-bot"
-        }
+        "link": "https://github.com/Dank-del/stats-bot"
     },
     {
-        "links": {
-            "github": "https://github.com/MyAnimeLounge/MyAnimeLoungeBoot"
-        },
+        "link": "https://github.com/MyAnimeLounge/MyAnimeLoungeBoot",
         "title": "MyAnimeLounge",
         "description": "Anime tracking and social media (WIP) platform written in Java using Spring Boot, and PostgreSQL"
     },
     {
         "title": "Easy-Push",
         "description": "Open Source Realtime data transmission system written using Nest.js, Node.js, Typescript using a PostgreSQL Database",
-        "links": {
-            "github": "https://github.com/Dank-del/easy-push"
-        }
+        "link": "https://github.com/Dank-del/easy-push"
     },
     {
         "title": "anilistWrapPY",
         "description": "anilistWrapPY is an unofficial python wrapper for anilist GraphQL API.",
-        "links": {
-            "github": "https://github.com/Dank-del/anilistWrapPY",
-            "pypi": "https://pypi.org/project/anilistwrappy/"
-        }
+        "link": "https://pypi.org/project/anilistwrappy/"
     },
     {
         "title": "anilistWrapGo",
-        "links": {
-            "github": "https://github.com/Dank-del/anilistWrapGO",
-            "go.dev": "https://pkg.go.dev/github.com/Dank-del/anilistWrapGO"
-        },
-        "description": "anilistWrapGo is an unofficial Anilist.co GraphQL API wrapper for GoLang."
+        "description": "anilistWrapGo is an unofficial Anilist.co GraphQL API wrapper for GoLang.",
+        "link": "https://pkg.go.dev/github.com/Dank-del/anilistWrapGO"
     },
     {
         "title": "Kigyo",
         "description": "Telegram Group Management Bot with over 3M users, built using Python, PostgreSQL, and Telegram API.",
-        "links": {
-            "github": "https://github.com/AnimeKaizoku/EnterpriseALRobot",
-            "telegram": "https://telegram.dog/kigyorobot"
-        }
+        "link": "https://github.com/AnimeKaizoku/EnterpriseALRobot"
     },
     {
         "title": "Barta Songmelon",
         "description": "Real-time Meetings platform built using Vercel, NextJS, TypeScript, and Realtime technologies.",
-        "links": {
-            "github": "https://github.com/Dank-del/barta-songmelon"
-        }
+        "link": "https://github.com/Dank-del/barta-songmelon"
     },
     {
         "title": "Temporal Demo",
         "description": "Demo site showcasing orderbook simulation of temporal.exchange, to be shown to investors",
-        "links": {
-            "webite": "https://demo.temporal.exchange"
-        }
+        "link": "https://demo.temporal.exchange"
     },
     {
         "title": "CairoRasa API",
         "description": "API for food delivery service built with FastAPI, MongoDB, and Python.",
-        "links": {
-            "github": "https://github.com/CairoRasa/backend"
-        }
+        "link": "https://github.com/CairoRasa/backend"
     },
     {
         "title": "Firebase Task Logger",
         "description": "Task logging application built with ReactJS, Redux, Firebase, and Typescript.",
-        "links": {
-            "github": "https://github.com/Dank-del/trestle-assignment"
-        }
+        "link": "https://github.com/Dank-del/trestle-assignment"
     },
     {
         "title": "Bausastra",
         "description": "Indonesian Dictionary Bot built with GrammY, Telegram Bot API, Web Scraping, and Typescript.",
-        "links": {
-            "github": "https://github.com/Dank-del/bausastra-bot"
-        }
+        "link": "https://github.com/Dank-del/bausastra-bot"
     },
     {
         "title": "Fight Censorship Bot",
         "description": "Bot built with Golang and Telegram Bot API to fight censorship on telegram and restricted media",
-        "links": {
-            "github": "https://github.com/Dank-del/FightCensorshipBot"
-        }
+        "link": "https://github.com/Dank-del/FightCensorshipBot"
     }
 ]
