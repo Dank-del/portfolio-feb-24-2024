@@ -1,4 +1,4 @@
-import { createLazyFileRoute } from '@tanstack/react-router';
+import { Link, createLazyFileRoute } from '@tanstack/react-router';
 import { useQuery } from '@apollo/client';
 import { GET_POSTS } from '@/lib/graphql';
 import { PostGQLResponse } from '@/types/posts';
@@ -10,6 +10,9 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { BookOpenCheck, Loader2 } from 'lucide-react';
 import { BentoGridItem } from '@/components/ui/bento-grid';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
+import Github from '@/components/icons/github';
+import Discord from '@/components/icons/discord';
+import Telegram from '@/components/icons/telegram';
 export const Route = createLazyFileRoute('/')({
     component: Index,
 })
@@ -25,6 +28,20 @@ function Index() {
             <p className="max-w-[700px] text-lg mb-3 text-muted-foreground">
                 Hobbyist student software developer.
             </p>
+            <div className="flex gap-2 flex-row">
+                <Link className='flex justify-between gap-1 bg-zinc-800 items-center border rounded-md p-[5px]' to='https://github.com/Dank-del'>
+                    <p className='text-md'>Github</p>
+                    <Github />
+                </Link>
+                <Link className='flex justify-between gap-1 bg-zinc-800 items-center border rounded-md p-[5px]' to='https://telegram.dog/dank_as_fuck'>
+                    <p className='text-md'>Telegram</p>
+                    <Telegram />
+                </Link>
+                <Link className='flex justify-between gap-1 bg-zinc-800 items-center border rounded-md p-[5px]' to='https://discord.com/users/506536929152466945'>
+                    <p className='text-md'>Discord</p>
+                    <Discord />
+                </Link>
+            </div>
             <h1 className='text-2xl'>Experience</h1>
             <ol className="relative border-s border-gray-200">
                 {experience.map((exp, idx) => (
