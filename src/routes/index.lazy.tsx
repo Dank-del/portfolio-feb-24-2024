@@ -28,8 +28,9 @@ function Index() {
             </p>
             <h1 className='text-2xl'>Experience</h1>
             <ol className="relative border-s border-gray-200">
-                {experience.map((exp) => (
+                {experience.map((exp, idx) => (
                     <ExperiencePanel
+                        key={idx}
                         company={exp.company}
                         date={exp.time}
                         position={exp.position}
