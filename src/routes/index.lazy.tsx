@@ -75,6 +75,7 @@ function Index() {
                             // link={post.url}
                             <BentoGridItem
                                 key={i}
+                                url={post.url}
                                 title={post.title}
                                 description={`${post.readTimeInMinutes} min read`}
                                 header={<img src={post.coverImage.url} />}
